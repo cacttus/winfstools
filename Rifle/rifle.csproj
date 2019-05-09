@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C801830B-F855-4954-951B-198A46188A47}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>rifle</RootNamespace>
+    <AssemblyName>rifle</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>rifle.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActivationDialog.Designer.cs">
+      <DependentUpon>ActivationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActivationDialogEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActivationDialogEmail.Designer.cs">
+      <DependentUpon>ActivationDialogEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActivationSuccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActivationSuccess.Designer.cs">
+      <DependentUpon>ActivationSuccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActivatorConfiguration.cs" />
+    <Compile Include="ApplicationActivator.cs" />
+    <Compile Include="AppUtils.cs" />
+    <Compile Include="EncryptionUtils.cs" />
+    <Compile Include="FileCache.cs" />
+    <Compile Include="FileCycler.cs" />
+    <Compile Include="FileFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileFilter.Designer.cs">
+      <DependentUpon>FileFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileTypeManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileTypeManagerForm.Designer.cs">
+      <DependentUpon>FileTypeManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IActivationForm.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Native.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Range.cs" />
+    <Compile Include="Resources.Designer.cs" />
+    <Compile Include="RifleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RifleManager.cs" />
+    <Compile Include="RifleUtils.cs" />
+    <EmbeddedResource Include="ActivationDialog.resx">
+      <DependentUpon>ActivationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActivationDialogEmail.resx">
+      <DependentUpon>ActivationDialogEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActivationSuccess.resx">
+      <DependentUpon>ActivationSuccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileFilter.resx">
+      <DependentUpon>FileFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileTypeManagerForm.resx">
+      <DependentUpon>FileTypeManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Resources.resx" />
+    <EmbeddedResource Include="RifleForm.resx">
+      <DependentUpon>RifleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="rifle.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
