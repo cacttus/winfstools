@@ -12,7 +12,7 @@ DeltaSearch is a paralell filesystem search utility with regular expression *and
 
 ### DirScan
 
-DirScan scans directories for changes and launches an executable, or file (of any kind) when it detects a filesystem change.
+DirScan scans directories for changes and launches an executable, or file (of any kind) when it detects a filesystem change.  This is similar to the AutoMove appliation, yet instead of moving files it executes a file.
 
 ### Flattener
 
