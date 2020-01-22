@@ -2,8 +2,6 @@
 
 This is a suite of simple filesystem tools for Microsoft Windows. 
 
-## Tools 
-
 ### AutoMove
 
 AutoMove polls an application directory for added files, then moves those files to a new directory when it sees them.  This is (was) useful for things like torrented files, if you don't want to leave your downloaded files in a shared folder.  It could also be used as a server utility, to move files that users save onto the server.
