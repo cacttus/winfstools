@@ -22,7 +22,7 @@ Flattener simply flattens a directory tree, placing all the files it finds into 
 
 DeDuper removes duplicate files in a directory tree.  In conjunction with Flattener, this tool is very useful when sifting through large blocks of downloaded data.  The tool also gives you custom name-matching options. In the future, this tool should support regular expression filetypes.
 
-##Rifle 
+## Rifle 
 
 Rifle is a timer application that runs all files, execurables (or anything else), in the specified directory.  The aplication includes a stop-watch option so that you can time when items get executed.
 
